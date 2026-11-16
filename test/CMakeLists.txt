@@ -1,3 +1,7 @@
 add_executable(algebra_finite_fields_test finite_field_test.cpp)
 target_link_libraries(algebra_finite_fields_test PRIVATE algebra::finite_fields GTest::gtest_main)
 gtest_discover_tests(algebra_finite_fields_test TEST_PREFIX "algebra_finite_fields.")
+
+add_executable(algebra_finite_fields_cached_test cached_finite_field_test.cpp)
+target_link_libraries(algebra_finite_fields_cached_test PRIVATE algebra::finite_fields GTest::gtest_main)
+gtest_discover_tests(algebra_finite_fields_cached_test TEST_PREFIX "algebra_finite_fields.")
